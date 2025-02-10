@@ -9,9 +9,18 @@ client.on("ready", () => {
 
 //Prima di tutto mandare il messaggio del ticket
 client.on("message", message => {
-    if (message.content == "!ciao") {
-        message.channel.send("Clicca sulla reazione per aprire un ticket")
-            .then(msg => msg.react("📩")) //Personalizzare l'emoji della reaction
+    if (message.content == "!ticket") {
+        message.channel.send("Clicca sulla reazione "🎫" per aprire un ticket")
+        message.channel.send("Clicca sulla reazione "🚨" per fare Candidatura Staff!")
+        message.channel.send("Clicca sulla reazione "🥽" per fare Candidatura Media/Youtuber!")
+        message.channel.send("Clicca sulla reazione "🎗️" per fare Partnership!!")
+            .then(msg => msg.react("🎫")) //Personalizzare l'emoji della reaction
+        message.channel.send("Clicca sulla reazione per aprire una Candidaura staff!")
+            .then(msg => msg.react("🚨")) //Personalizzare l'emoji della reaction
+        message.channel.send("Clicca sulla reazione per aprire una Candidaura Media/Youtuber!")
+            .then(msg => msg.react("🥽")) //Personalizzare l'emoji della reaction
+        message.channel.send("Clicca sulla reazione per aprire una Partnership!")
+            .then(msg => msg.react("🎗️")) //Personalizzare l'emoji della reaction
     }
 })
 
